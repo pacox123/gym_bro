@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="manifest" href="manifest.webmanifest">
+    <script src="app.js"></script>
+
+    <title>GYM-BRO</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark  border-3 border-bottom border-danger">
+        <div class="container">
+          <a class="navbar-brand" href="#">GYM BRO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+            <ul class="navbar-nav ms-auto" >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ejercicios.html">Ejercicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="historia.html">Historia</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>
+    
+    
+    
+    
+    <div class="container">
+      <div class="calculo">
+        <h1>Para empezar tu entrenamiento calcula tu masa corporal y selecciona la dificultad de tu entrenamiento.</h1>
+        <p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            Calcula
+          </button>
+        </p>
+          <div class="collapse collapse-horizontal" style="text-align: center;" id="collapseWidthExample">
+            <form>
+              <input class="form-control" type="text" placeholder="Ingresa tu peso" aria-label="default input example">
+              <input class="form-control" type="text" placeholder="Ingresa tu altura" aria-label="default input example">
+              <select class="form-select" aria-label="Nivel">
+                <option selected>Selecciona tu nivel</option>
+                <option value="1">facil</option>
+                <option value="2">medio</option>
+                <option value="3">dificil</option>
+              </select>
+              <br>
+              <button  type="submit" class="btn btn-primary" >Submit</button>
+            </form>
+          </div>
+      </div> 
+      <label for="exampleFormControlInput1" class="form-label">Tu peso corporal es es</label>
+      <input class="form-control" type="text" placeholder="75" aria-label="default input example">
+
+
+
+
+
+
+      <div class="ejersicio">
+        <div class="card text-center">
+          <div class="card-header">
+              <h2>Zancada</h2>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 ">
+                <center>
+                    <img src="img/zancadas.gif" width="200" height="350" class="card-img-top">
+                </center>
+            </div>
+            <div class="col-sm-6">
+                <h5 class="nivel">
+                  ¡Tu nivel actual es Difícil..!!! por lo que te recomendamos hacer 15 repeticiones de 7 series.
+                </h5>
+                <h6 class="descripcion">Poner las manos en la cintura, da un paso largo hacia adelante hasta que la rodilla de la pierna trasera tenga contacto con el suelo. Vuelve a la posición inicial e intercambia el pie que avanzas.</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="card text-center">
+          <div class="card-header">
+              <h2>Step-up</h2>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 ">
+                <center>
+                    <img src="img/step-up.gif" width="200" height="350" class="card-img-top">
+                </center>
+            </div>
+            <div class="col-sm-6">
+                <h5 class="nivel">
+                  ¡Tu nivel actual es Difícil..!!! por lo que te recomendamos hacer 15 repeticiones de 7 series.
+                </h5>
+                <h6 class="descripcion">Para este ejercicio necesitaremos un escalón (puede ser una escalera, un cajón, una silla o un banco). Sólo debes subir y bajar el escalón alternando las piernas manteniendo la postura recta y la pierna de apoyo en la silla debe colocarse a 90 grados, sin que la rodilla sobrepase la punta del pie.</h6>
+            </div>
+          </div>
+        </div>
+
+        <div class="card text-center">
+          <div class="card-header">
+              <h2>Patadas de glúteo</h2>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 ">
+                <center>
+                    <img src="img/Patadasdegluteo.gif" width="200" height="350" class="card-img-top">
+                </center>
+            </div>
+            <div class="col-sm-6">
+                <h5 class="nivel">
+                  ¡Tu nivel actual es Difícil..!!! por lo que te recomendamos hacer 15 repeticiones de 7 series.
+                </h5>
+                <h6 class="descripcion">La posición inicial es en cuadrupedia, con rodillas y manos apoyadas en el suelo. Coloca las manos abiertas a la anchura de los hombros y las rodillas rectas, justo debajo de las caderas. Empieza primero con una pierna, manteniendo la rodilla doblada a 90 grados y elevando la pierna hasta que esté al nivel de la cadera y después baja la rodilla hasta llegar casi al suelo.</h6>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    </div>
+    <br>
+    <br>
+    <footer class="bg-dark text-center text-white ">
+        <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+            <small>&copy; 2022 <b>BlackSoft Company</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

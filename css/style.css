@@ -1,0 +1,104 @@
+
+  @font-face {
+    font-family: 'Plain';
+    src: url('../fonts/Plain-Regular.woff2') format('woff2'),
+        url('../fonts/Plain-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+
+  --base-font-family:     'Plain', sans-serif;
+  --p-font-size:          18px;
+}
+
+body {
+  background: var(--white-color);
+  font-family: var(--base-font-family);
+  
+}
+
+p {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+  line-height: 1.5em;
+}
+
+
+/* ---------Home----------- */
+body{
+    background-color: #f9f9f9f2;
+}
+.calculo{
+    margin-top: 80px;
+
+}
+.calculo form .btn{
+    text-align: center;
+}
+.nivel{
+    margin-top: 50px;
+}
+.descripcion{
+    margin-top: 50px;
+}
+.carousel {
+    margin-top: 80px;
+}
+section{
+    margin-top: 20px;
+    
+    
+}
+h1{
+    color: rgba(70, 68, 68, 0.785);
+    text-align: center;
+    margin: 40px;
+}
+.footer{
+    background: black;
+
+}
+/*  */
+
+
+.ejersicio .card {
+    margin-top: 50px;
+    background: linear-gradient(45deg, #625c5c, #000000);
+    color: #fff;
+}
+.historia .row .card{
+    margin: 20px;
+}
+.historia .row .card-body{
+    height: 500px;
+}
+
+
+.texto-justificado {
+    text-align: justify;
+    margin: 15px;
+    margin-top: 50px;
+}
+
+
+#instalar{
+    position: fixed;
+    top: 90%;
+    width: 180px;
+    left: 0px ;
+    background-color:rgba(0, 0, 0, 1)
+
+}
+#instalarNotificaciones{
+    position: fixed;
+    top: 83%;
+    width: 180px;
+    left: 0px ;
+    background-color:rgba(0, 0, 0, 1);
+}
+.espera{
+    margin-top: 35px;
+}
