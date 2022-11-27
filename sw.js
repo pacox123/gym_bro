@@ -12,6 +12,8 @@ workbox.precaching.precacheAndRoute([
   'img/zancadas.gif',
   'img/step-up.gif',
   'img/Patadasdegluteo.gif',
+  'css/bootstrap.min.css',
+  'js/bootstrap.js'
 ]);
 
 workbox.routing.registerRoute(
