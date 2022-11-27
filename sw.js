@@ -7,7 +7,6 @@ workbox.precaching.precacheAndRoute([
   'index.html',
   'offline.html',
   'ejercicios.html',
-  'historia.html',
   'img/offline.png',
   'img/logo.png',
   'img/zancadas.gif',
