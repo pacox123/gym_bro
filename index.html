@@ -131,50 +131,44 @@
     </footer>
 
 
-<script>
-  let enventoPrompt;
-  window.addEventListener('beforeinstallprompt', function (e) {
-    e.preventDefault();
-    enventoPrompt = e;
-  });
-  btnInstalar = document.getElementById("instalar");
-  btnBorrar = document.getElementById("modalBorrar");
-  btnInstalar.addEventListener('click', (e) => {
-    btnInstalar.setAttribute("data-bs-dismiss", "modal");
-    btnBorrar.style.display = 'none';
-    enventoPrompt.prompt();
-    enventoPrompt.userChoice.then((choiceResult) => {
-      if (choiceResult.out === 'accepted') {
-        console.log('El usuario instalo la aplicación');
-      } else {
-        console.log('El usuario rechazo la instalación');
+    <script>
+      let eventoPrompt;
+      window.addEventListener('beforeinstallprompt', function(e){
+        e.preventDefault();
+        eventoPrompt=e;
+      });
+      btnInstalar = document.getElementById("instalar");
+      btnInstalar.addEventListener('click', (e)=>{
+        btnInstalar.style.display = 'none';
+        eventoPrompt.prompt();
+    eventoPrompt.userChoice.then((choiceResult)=>{
+      if(choiceResult.outcome==='accepted'){
+        console.log('el usuario instalo la aplicacion');
+      }else{
+        console.log('El usuario rechazo la instalcion');
       }
-      enventoPrompt = null;
+      eventoPrompt=null;
     });
   });
-
-  let botonNotificaciones = document.getElementById('instalarNotificaciones');
-  botonNotificaciones.addEventListener('click', function (e) {
-    Notification.requestPermission().then(function (result) {
-      if (result === 'granted') {
-        randomNotification();
+  //Para las notificaciones-----------------------------------------------
+  let botonNotificaciones = document.getElementById("instalarNotificaciones");
+  botonNotificaciones.addEventListener('click',function(e){
+    Notification.requestPermission().then(function(result){
+      if(result==='granted'){
+        randomNotificacion();
       }
     });
   });
-
-  function randomNotification() {
-    let nTitle = "GymBro";
-    let nbody= "¡¡¡Gracias por visitarnos...!!! 😊 Recuerda que tu salud es primordial para una vida larga y duradera.";
-        let nImage="./img/logo.png";
-    let options = {
-      body: nBody,
-      icon: nImage
+  function randomNotificacion(){
+    let nTitle="Gym Bro";
+        let nbody= "¡¡¡Gracias por visitarnos...!!! 😊 Recuerda que tu salud es primordial para una vida larga y duradera.";
+        let nImage="./img/logo.png";let options={
+      body:nbody,
+      icon:nImage
     }
-    let notif = new Notification(nTitle, options);
-    setTimeout(randomNotification, 10000);
+    let notif = new Notification(nTitle,options);
+    setTimeout(randomNotificacion, 10000);
   }
-
-
 </script>
     <script src="js/bootstrap.js"></script>
 </body>
