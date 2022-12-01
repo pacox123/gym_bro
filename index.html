@@ -131,45 +131,86 @@
     </footer>
 
 
-    <script>
-      let eventoPrompt;
-      window.addEventListener('beforeinstallprompt', function(e){
-        e.preventDefault();
-        eventoPrompt=e;
-      });
-      btnInstalar = document.getElementById("instalar");
-      btnInstalar.addEventListener('click', (e)=>{
-        btnInstalar.style.display = 'none';
-        eventoPrompt.prompt();
+
+<script>
+  // ************Instalación personalizada *************
+  let eventoPrompt;
+  let varInstalado;
+
+  window.addEventListener('beforeinstallprompt', function(e){
+    e.preventDefault();
+    eventoPrompt = e;
+  });
+
+
+  varInstalado = localStorage.getItem("Instalado");
+  console.log(varInstalado);
+
+
+  btnInstalar = document.getElementById("instalar");
+
+  window.addEventListener('submit', function(e){
+    console.log('Recarga');
+    console.log(eventoPrompt);
+  });
+
+  if(varInstalado == 'Si'){
+    btnInstalar.style.display = 'none';
+  }
+  else{
+    btnInstalar.style.display = 'true';
+  }
+
+    btnInstalar.addEventListener('click', (e)=>{
+    eventoPrompt.prompt();
     eventoPrompt.userChoice.then((choiceResult)=>{
-      if(choiceResult.outcome==='accepted'){
-        console.log('el usuario instalo la aplicacion');
-      }else{
-        console.log('El usuario rechazo la instalcion');
+      if(choiceResult.outcome === 'accepted'){
+        btnInstalar.style.display = 'none';
+        console.log('El Usuario Instalo la App');
+        localStorage.setItem("Instalado","Si");
+        console.log(eventoPrompt);
+      }
+      else{
+        console.log('El Usuario Rechazo la Intalación');
+        localStorage.setItem("Instalado","No");
+        varInstalado = localStorage.getItem("Instalado");
+        console.log(eventoPrompt);
       }
       eventoPrompt=null;
+      console.log(eventoPrompt);
     });
   });
-  //Para las notificaciones-----------------------------------------------
-  let botonNotificaciones = document.getElementById("instalarNotificaciones");
-  botonNotificaciones.addEventListener('click',function(e){
+
+  //  ** Fin instalación personalizada **
+
+
+  //******** Notificaciones  *********
+
+  let btnNotificaciones = document.getElementById("instalarNotificaciones");
+  btnNotificaciones.addEventListener('click', function(e){
     Notification.requestPermission().then(function(result){
-      if(result==='granted'){
+      if(result === 'granted'){
         randomNotificacion();
       }
     });
   });
+
   function randomNotificacion(){
-    let nTitle="Gym Bro";
-        let nbody= "¡¡¡Gracias por visitarnos...!!! 😊 Recuerda que tu salud es primordial para una vida larga y duradera.";
-        let nImage="./img/logo.png";let options={
-      body:nbody,
-      icon:nImage
+     let nTitle = "Gym Bro";
+    let nbody= "¡¡¡Gracias por visitarnos...!!! 😊 Recuerda que tu salud es primordial para una vida larga y duradera.";
+        let nImage="./img/logo.png";
+    let options = {
+      body: nbody,
+      icon: nImage
     }
-    let notif = new Notification(nTitle,options);
-    setTimeout(randomNotificacion, 10000);
+    let notif = new Notification(nTitle, options);
+    setTimeout(randomNotificacion,10000);
   }
+
+  //** Fin Notificaciones **
 </script>
-    <script src="js/bootstrap.js"></script>
+
+
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
