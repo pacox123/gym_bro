@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <meta name="theme-color" content="#dc3545">
-    <linK rel="shortcut icon" href="icon/icon-32.png"
+    <linK rel="shortcut icon" href="icon/icon-32.png">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/offline.css" />
     <link rel="manifest" href="manifest.webmanifest">
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "e34e3ec3-54ed-4802-b720-a4c1d4df28c2",
+        });
+      });
+    </script>
     <script src="app.js"></script>
 
     <title>GYM-BRO</title>

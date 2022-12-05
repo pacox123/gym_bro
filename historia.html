@@ -8,8 +8,17 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#dc3545">
-    <linK rel="shortcut icon" href="icon/icon-32.png"
+    <linK rel="shortcut icon" href="icon/icon-32.png">
     <script src="app.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "e34e3ec3-54ed-4802-b720-a4c1d4df28c2",
+        });
+      });
+    </script>
 
     <title>Historia</title>
 </head>
